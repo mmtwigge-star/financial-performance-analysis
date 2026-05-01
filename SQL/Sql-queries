@@ -1,5 +1,10 @@
 
-###segment_performance_variance.sql###
+-- ============================================
+-- Query 1: Segment Performance Variance
+-- Purpose: Calculate average margin per segment 
+-- and variance from overall business average
+-- ============================================
+
 WITH segment_performance AS (
     SELECT 
         Segment,
@@ -26,8 +31,12 @@ CROSS JOIN overall o
 ORDER BY s.Avg_Margin_Pct DESC;
 
 
+-- ============================================
+-- Query 2: Discount Impact by Segment
+-- Purpose: Analyse how discount bands affect 
+-- margin within each customer segment
+-- ============================================
 
-###discount_impact_by_segment.sql###
 WITH segment_discount AS (
     SELECT 
         Segment,
@@ -58,7 +67,12 @@ FROM segment_discount sd
 JOIN segment_total st ON sd.Segment = st.Segment
 ORDER BY sd.Segment, sd.Avg_Margin DESC;
 
-###monthly_profit_by_segment.sql###
+-- ============================================
+-- Query 3: Monthly Profit by Segment
+-- Purpose: Track monthly revenue and profit 
+-- trends broken down by customer segment
+-- ============================================
+
 WITH monthly_segment AS (
     SELECT 
         Year,
