@@ -19,7 +19,7 @@ Financial performance analysis using Excel, Python, SQL and Power BI. Identifies
 ![Product & Country Performance](dashboard/product_country.png)
 
 ### Enterprise Segment — Loss Making
-![Enterprise](dashboard/product_country_enterprise.png)
+![Enterprise](dashboard/product_country(enterprise).png)
 
 ## Business Problem
 A business operating across 5 countries needed to understand which customer 
